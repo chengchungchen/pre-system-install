@@ -1,0 +1,98 @@
+# Set Chinese support by hand on.
+
+# update
+
+apt update
+apt upgrade
+apt install vim
+
+################################
+## swap Ctrl & CapsLock
+#setxkbmap -option ctrl:swapcaps
+#
+## autoset on boot.
+#vim /etc/default/keyboard
+#
+#XKBOPTIONS="ctrl:swapcaps"
+################################
+
+Use gnome-tweak-tools
+apt install gnome-tweak-tool
+
+##############################################
+## setup screen brightness
+## Refer: https://www.readhouse.net/post/473910/
+#echo 1336 > /sys/class/backlight/intel_backlight/brightnkjlaf
+#
+## Install chinese & japenese input
+## Refer: http://goodjack.blogspot.tw/2013/08/linux-phonetic-setting.html
+#apt install hime hime-chewing hime-anthy
+##############################################
+
+## Install Dropbox
+apt install nautilus-dropbox
+
+## Install Nixnote -> can not use Chinese
+#apt install nixnote2
+
+## Ubuntu16.04 have installed
+## Install Libre Office Chinese support
+#apt install libreoffice-l10n-zh-tw
+
+## Install Anki
+apt install anki -> can work in Ubuntu 16.04
+##############################################
+#use office: https://apps.ankiweb.net/
+#
+#and
+##ln -s /usr/lib/x86_64-linux-gnu/libicui18n.so.57 /usr/lib/x86_64-linux-gnu/libicui18n.so.48
+#
+#no need to edit ~/.profile & ~./gtk2.0
+##############################################
+
+## Install Virtual Box
+Office web: https://www.virtualbox.org/wiki/Linux_Downloads
+
+## Install Markdown Editer: remarkable
+## https://remarkableapp.github.io/index.html
+apt install remarkable
+
+## Install pandoc
+apt install pandoc
+
+## Maybe fix-broken install
+apt --fix-broken install
+
+#################################################
+### Install gnome-screensaver-command, and creat aliases
+### https://askubuntu.com/questions/184728/how-do-i-lock-the-screen-from-a-terminal
+#################################################
+
+## Install tlp
+## https://hsuancheng.net/notebook-in-linux/
+## http://www.webupd8.org/2013/04/improve-power-usage-battery-life-in.html
+apt install tlp acpi-call
+
+## show tlp stats
+tlp stat
+
+## Install Chrome
+## Refer: https://askubuntu.com/questions/79280/how-to-install-chrome-browser-properly-via-command-line
+
+# vim /etc/apt/sources.list
+    deb http://dl.google.com/linux/chrome/deb/ stable main
+# wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+# apt update
+# apt install google-chrome-stable
+
+
+## Install L2TP client UI
+## Refer:
+## http://blog.z-proj.com/enabling-l2tp-over-ipsec-on-ubuntu-16-04/
+## https://askubuntu.com/questions/934350/connect-to-l2tp-over-ipsec
+apt install network-manager-l2tp
+add-apt-repository ppa:nm-l2tp/network-manager-l2tp
+apt update
+apt install network-manager-l2tp
+apt install network-manager-l2tp-gnome
+reboot
