@@ -96,3 +96,8 @@ apt update
 apt install network-manager-l2tp
 apt install network-manager-l2tp-gnome
 reboot
+
+## Install Remarkable
+## Refer:
+## https://remarkableapp.github.io/index.html
+## https://askubuntu.com/questions/639323/how-to-install-remarkable-editor-on-ubuntu-from-terminal
